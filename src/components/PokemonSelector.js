@@ -1,9 +1,9 @@
 import React from 'react';
 
-
+import './PokemonSelector.css'
   const PokemonSelector = (props)=>{
   const options = props.pokemon.map((pokem,index)=>{
-    return <option value={index} key={index}>
+    return <option   value={index} key={index}>
     {pokem.name}
     </option>
 
@@ -12,8 +12,9 @@ import React from 'react';
     props.onSelectedPokemon(event.target.value)
   }
   return (
-    <select id = "pokemon-selector" onChange={handleChange}>
-    <option disabled value ="default"> Choose pokemon</option>
+    <select class="custom-select" onChange={handleChange}>
+
+    <option disabledvalue="default"> Choose pokemon</option>
     {options}
     </select>
   )

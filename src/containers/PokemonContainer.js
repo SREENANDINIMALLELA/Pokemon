@@ -1,5 +1,7 @@
 import React from 'react';
  import PokemonSelector from "../components/PokemonSelector"
+ import PokemonDetail from "../components/PokemonDetail"
+ import './PokemonContainer.css'
 class PokemonContainer extends React.Component{
   constructor(props){
     super(props);
@@ -46,8 +48,11 @@ class PokemonContainer extends React.Component{
   render(){
     console.log("render")
     return (
-    <div>
+    <div className = "pokemon-container">
       <PokemonSelector pokemon = {this.state.pokemon} onSelectedPokemon ={this.onPokemonSelector}/>
+      <div className = "pokemon-detail">
+      <PokemonDetail pokemon ={this.state.currentPokemonDetails}/>
+      </div>
     </div>
     )
   }
