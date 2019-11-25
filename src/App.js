@@ -1,10 +1,12 @@
-import React from 'react';
+import React ,{Component} from 'react';
+import PokemonContainer from './containers/PokemonContainer'
 import './App.css';
-
-function App() {
-  return (
-
-  );
+class App extends Component{
+  render(){
+    return (
+     <PokemonContainer/>
+    );
+}
 }
 
 export default App;
